@@ -1,7 +1,7 @@
 services:
   - type: web
     name: openclaw
-    runtime: starter
+    runtime: docker
     plan: free
     healthCheckPath: /health
     envVars:
@@ -15,7 +15,3 @@ services:
         value: /data/workspace
       - key: OPENCLAW_GATEWAY_TOKEN
         generateValue: true
-    disk:
-      name: openclaw-data
-      mountPath: /data
-      sizeGB: 1
